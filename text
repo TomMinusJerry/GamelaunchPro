@@ -1,0 +1,37 @@
+GamelaunchPro/
+├── app/
+│   ├── (dashboard)/
+│   │   ├── layout.tsx                 ← sidebar + topbar
+│   │   ├── dashboard/
+│   │   │   └── page.tsx               ← projects grid
+│   │   └── projects/
+│   │       └── [id]/page.tsx          ← project overview placeholder
+│   ├── api/
+│   │   └── auth/[...nextauth]/route.ts  ← Clerk fallback if needed
+│   ├── layout.tsx                     ← root layout
+│   ├── page.tsx                       ← landing page
+│   └── globals.css
+├── components/
+│   ├── shell/
+│   │   ├── app-sidebar.tsx
+│   │   └── app-topbar.tsx
+│   ├── projects/
+│   │   ├── project-card.tsx
+│   │   └── project-create-dialog.tsx
+│   └── ui/                            ← all ShadCN components (install below)
+├── actions/
+│   └── projects.ts                    ← server actions for create/list
+├── db/
+│   ├── index.ts
+│   └── schema/
+│       └── projects.ts                ← exact table from CodeSpring PRD
+├── lib/
+│   └── auth.ts
+├── public/
+├── migrations/                        ← Drizzle migrations will go here
+├── .env.example
+├── drizzle.config.ts
+├── next.config.ts
+├── package.json
+├── tailwind.config.ts
+└── tsconfig.json
